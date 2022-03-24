@@ -20,6 +20,18 @@ def gcd(a, b):
     return gcd(b, a % b)
 
 
+def GCD(a, b):
+    if a < b:
+        tmp = a
+        a = b
+        b = tmp
+    while b != 0:
+        tmp = a % b
+        a = b
+        b = tmp
+    return a
+
+
 if __name__ == "__main__":
     n = int(input())
     if n == 2:
