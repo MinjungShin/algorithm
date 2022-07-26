@@ -9,13 +9,11 @@ import sys
 sys.stdin = open("../input.txt", "rt")
 input = sys.stdin.readline
 
-tmp = input().strip()
+tmp = input().rstrip()
 while tmp != "END":
-    arr = list(tmp.split(" "))
-    for i in range(len(arr) - 1, -1, -1):
-        string = list(arr[i])
-        string.reverse()
-        string = "".join(string)
-        print(string, end=" ")
+    arr = list(tmp)
+    arr.reverse()
+    for x in arr:
+        print(x, end="")
     print()
     tmp = input().rstrip()
